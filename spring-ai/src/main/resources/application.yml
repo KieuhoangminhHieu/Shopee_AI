@@ -1,17 +1,21 @@
 server:
   port: 8080
+
 spring:
   application:
     name: spring-ai
-    datasource:
-      url: jdbc:postgresql://localhost:5432/spring-ai
-      username: postgres
-      password: password
-      driver-class-name: org.postgresql.Driver
-    jpa:
-      properities:
-        hibernate:
-          dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/spring-ai
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
   ai:
     openai:
       api-key: AIzaSyDZraR82PYB0pfBlE5z46e9IRrhryCqxGE
@@ -25,3 +29,4 @@ spring:
         repository:
           jdbc:
             initialize-schema: always
+

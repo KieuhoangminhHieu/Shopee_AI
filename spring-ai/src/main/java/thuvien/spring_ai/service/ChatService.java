@@ -47,10 +47,10 @@ public class ChatService {
 
         return chatClient.prompt()
                 .options(chatOptions)
-                .system("You are ShopeeAI, a smart ecommerce assistant.\n" +
-                        "Your job is to help users find suitable products based on their needs.\n" +
-                        "Always respond in JSON format with a list of products including: name, category, price, and description.\n" +
-                        "Be concise, relevant, and avoid recommending unavailable items.\n")
+                .system("You are ShopeeAI, a smart ecommerce assistant." +
+                        "Your job is to help users find suitable products based on their needs." +
+                        "Always respond in JSON format with a list of products including: name, category, price, and description." +
+                        "Be concise, relevant, and avoid recommending unavailable items.")
                 .user(promptUserSpec -> promptUserSpec.media(media)
                         .text(message))
                 .call()
